@@ -1,3 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .heading-md {
+    @apply text-grey-700 font-sans text-heading-md;
+  }
+  .heading-sm {
+    @apply text-grey-700 font-sans text-heading-sm tracking-widest font-medium;
+  }
+  .app-body {
+    @apply text-grey-700 font-light;
+  }
+  .preview {
+    .heading-1 {
+      @apply text-grey-700 font-serif font-bold text-prev-heading-1;
+    }
+    .heading-2 {
+      @apply text-grey-700 font-serif font-light text-prev-heading-2;
+    }
+    .heading-3 {
+      @apply text-grey-700 font-serif font-bold text-prev-heading-3;
+    }
+    .heading-4 {
+      @apply text-grey-700 font-serif font-bold text-prev-heading-4;
+    }
+    .heading-5 {
+      @apply text-grey-700 font-serif font-bold text-prev-heading-5;
+    }
+    .heading-6 {
+      @apply text-orange font-serif font-bold text-prev-heading-6;
+    }
+    .p-reg {
+      @apply text-grey-700 font-serif text-prev-body;
+    }
+    .p-bold {
+      @apply text-grey-700 font-serif font-bold text-prev-body;
+    }
+    .p-mono {
+      @apply text-grey-700 font-mono text-prev-body;
+    }
+  }
+}
