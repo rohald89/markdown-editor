@@ -6,14 +6,36 @@ const NoteContext = createContext();
 
 function NoteProvider({ children }) {
   const [notes, setNotes] = useLocalStorage("notes", data);
-  const [selectedNote, setSelectedNote] = useState(null);
+  const [selectedNote, setSelectedNote] = useState(1);
+
+  const getNote = (id) => {
+    return notes.find((note) => note.id === id);
+  };
 
   const addNote = (note) => {
     setNotes([...notes, note]);
   };
 
+  const updateName = (id, name) => {
+    const updatedNotes = notes.map((note) => {
+        if (note.id === id) {
+            return { ...note, name };
+        }
+        return note;
+    });
+    setNotes(updatedNotes);
+  };
+
+  const deleteNote = (id) => {
+    const updatedNotes = notes.filter((note) => note.id !== id);
+    setNotes(updatedNotes);
+  }
+
   const value = {
     notes,
+    getNote,
+    updateName,
+    deleteNote,
     selectedNote,
     setSelectedNote,
     addNote,
