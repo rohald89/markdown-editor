@@ -1,7 +1,7 @@
 import { useNotes } from "../../context";
 
 const DeleteNote = () => {
-    const { deleteNote } = useNotes();
+  const { deleteNote } = useNotes();
 
   return (
     <button onClick={deleteNote}>

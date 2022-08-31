@@ -15,6 +15,9 @@ module.exports = {
       "prev-body": ["0.875rem", "1.5rem"],
     },
     extend: {
+      borderWidth: {
+        1: "1px",
+      },
       colors: {
         "grey-100": "#FFFFFF",
         "grey-200": "#F5F5F5",

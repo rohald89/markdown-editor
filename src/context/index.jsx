@@ -26,9 +26,8 @@ function NoteProvider({ children }) {
     setNotes(updatedNotes);
   };
 
-  const deleteNote = (id) => {
-    const updatedNotes = notes.filter((note) => note.id !== id);
-    setNotes(updatedNotes);
+  const deleteNote = () => {
+    console.log("DELETING NOTE", selectedNote);
   }
 
   const value = {
