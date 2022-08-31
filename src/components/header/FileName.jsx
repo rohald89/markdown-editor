@@ -10,7 +10,7 @@ const FileName = () => {
         <div>
             <label className="hidden text-grey-500 font-light mb-1 md:block" htmlFor="title">Document Name</label>
             <input
-            className="bg-transparent text-grey-100 outline-none"
+            className="bg-transparent text-grey-100 cursor-pointer outline-none border-b-1 border-transparent focus:border-grey-100 caret-orange"
             value={note.name}
             name="name"
             onChange={updateNote}

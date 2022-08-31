@@ -1,7 +1,8 @@
 import { useNotes } from "../../context";
 import NoteList from "./NoteList";
+import ThemeToggle from "./ThemeToggle";
 
-const Sidebar = ({sidebarVisible}) => {
+const Sidebar = ({sidebarVisible, theme, setTheme}) => {
     const { addNote } = useNotes();
   return (
     <div className={`${sidebarVisible ? "translate-x-0" : "-translate-x-[250px]"} fixed transition w-[250px] h-screen p-6 pb-8 bg-grey-900 text-grey-100 flex flex-col gap-6`}>
@@ -14,6 +15,7 @@ const Sidebar = ({sidebarVisible}) => {
             + New Document
         </button>
         <NoteList />
+        <ThemeToggle theme={theme} setTheme={setTheme} />
     </div>
   )
 };

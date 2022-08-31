@@ -15,26 +15,53 @@
     @apply font-light;
   }
   .preview {
-    .heading-1 {
-      @apply font-serif font-bold text-prev-heading-1;
+    h1 {
+      @apply font-serif font-bold text-prev-heading-1 text-grey-700 dark:text-grey-100;
     }
-    .heading-2 {
-      @apply font-serif font-light text-prev-heading-2;
+    h2 {
+      @apply font-serif font-light text-prev-heading-2 text-grey-700 dark:text-grey-100;
     }
-    .heading-3 {
-      @apply font-serif font-bold text-prev-heading-3;
+    h3 {
+      @apply font-serif font-bold text-prev-heading-3 text-grey-700 dark:text-grey-100;
     }
-    .heading-4 {
-      @apply font-serif font-bold text-prev-heading-4;
+    h4 {
+      @apply font-serif font-bold text-prev-heading-4 text-grey-700 dark:text-grey-100;
     }
-    .heading-5 {
-      @apply font-serif font-bold text-prev-heading-5;
+    h5 {
+      @apply font-serif font-bold text-prev-heading-5 text-grey-700 dark:text-grey-100;
     }
-    .heading-6 {
+    h6 {
       @apply text-orange font-serif font-bold text-prev-heading-6;
     }
-    .p-reg {
-      @apply font-serif text-prev-body;
+    p {
+      @apply font-serif text-prev-body text-grey-500 font-normal dark:text-grey-400;
+    }
+    ol {
+      @apply list-decimal text-grey-500 ml-8 dark:text-grey-400;
+    }
+    ul {
+      @apply text-grey-500 ml-8 space-y-2 dark:text-grey-400;
+      li {
+        @apply before:content-["\2022"] before:text-orange before:font-bold before:inline-block before:w-4 before:-ml-4;
+      }
+    }
+    blockquote {
+      @apply bg-grey-200 p-6 border-l-4 border-orange rounded-4 dark:bg-grey-800;
+      p {
+        @apply font-bold text-grey-700 dark:text-grey-100;
+      }
+    }
+    a {
+      @apply underline;
+    }
+    code {
+      @apply font-mono text-grey-700 dark:text-grey-100;
+    }
+    pre {
+      @apply p-6 bg-grey-200 dark:bg-grey-800;
+      code {
+        @apply dark:text-grey-100;
+      }
     }
     .p-bold {
       @apply font-serif font-bold text-prev-body;

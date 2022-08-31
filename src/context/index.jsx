@@ -18,7 +18,6 @@ function NoteProvider({ children }) {
         name: "Untitled",
         content: "",
         createdAt: Date.now(),
-
     }]);
   };
 
