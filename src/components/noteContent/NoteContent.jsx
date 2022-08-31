@@ -22,13 +22,14 @@ const NoteContent = () => {
                     <Content preview={preview}/>
                 </div>
             ):(
-                <div className="flex-grow flex items-start dark:bg-grey-1000">
-                    { !preview && (<div className="flex-1 h-full border-r-1 border-r-grey-300 dark:border-r-grey-600 ">
+                <div className="flex-grow flex dark:bg-grey-1000">
+                    { !preview && (
+                    <div className="flex-1 min-h-full border-r-1 border-r-grey-300 dark:border-r-grey-600 ">
                         <div className="flex justify-between items-center py-3 px-4 bg-grey-200 text-grey-500 dark:bg-grey-900">
                             <h2 className="heading-sm uppercase">markdown</h2>
                         </div>
                         <textarea
-                            className="h-full w-full p-4 outline-none text-grey-700 dark:bg-grey-1000 dark:text-grey-400"
+                            className="block h-full w-full p-4 outline-none text-grey-700 dark:bg-grey-1000 dark:text-grey-400"
                             name="content"
                             value={note.content}
                             onChange={updateNote}
