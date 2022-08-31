@@ -8,23 +8,33 @@ function NoteProvider({ children }) {
   const [notes, setNotes] = useLocalStorage("notes", data);
   const [selectedNote, setSelectedNote] = useState(1);
 
-  const getNote = (id) => {
-    return notes.find((note) => note.id === id);
+  const getActiveNote = () => {
+    return notes.find((note) => note.id === selectedNote);
+  }
+
+  const addNote = () => {
+    setNotes([...notes, {
+        id: Date.now(),
+        name: "Untitled",
+        content: "",
+        createdAt: Date.now(),
+
+    }]);
   };
 
-  const addNote = (note) => {
-    setNotes([...notes, note]);
-  };
-
-  const updateName = (id, name) => {
+  const updateNote = (e) => {
     const updatedNotes = notes.map((note) => {
-        if (note.id === id) {
-            return { ...note, name };
+        if (note.id === selectedNote) {
+            for (const key in note) {
+                if (key === e.target.name) {
+                    return { ...note, [key]: e.target.value };
+                }
+            }
         }
         return note;
     });
     setNotes(updatedNotes);
-  };
+  }
 
   const deleteNote = () => {
     console.log("DELETING NOTE", selectedNote);
@@ -32,8 +42,8 @@ function NoteProvider({ children }) {
 
   const value = {
     notes,
-    getNote,
-    updateName,
+    getActiveNote,
+    updateNote,
     deleteNote,
     selectedNote,
     setSelectedNote,
