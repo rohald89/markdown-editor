@@ -15,6 +15,9 @@ module.exports = {
       "prev-body": ["0.875rem", "1.5rem"],
     },
     extend: {
+      borderRadius: {
+        4: "4px",
+      },
       borderWidth: {
         1: "1px",
       },
@@ -36,6 +39,9 @@ module.exports = {
         sans: ["Roboto", "sans-serif"],
         mono: ["Roboto Mono", "monospace"],
         serif: ["Roboto Slab", "serif"],
+      },
+      letterSpacing: {
+        "heading-sm": "0.13rem",
       },
     },
   },
